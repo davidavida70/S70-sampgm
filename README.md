@@ -8,7 +8,7 @@ Fiz esta gamemode como uma prática de código, porém ao longo do tempo me apeg
 - Filterscripts (arquivos adicionais) para mais comandos e funções.
 
 ## Como usar a minha gamemode no seu servidor
-- Baixe o código base e substitua tudo na pasta SAMP.
+- Baixe o código base e substitua tudo na pasta SAMP. Os arquivos restantes estão no download do servidor no site oficial.
 
 # O que é SA-MP?
 - SA-MP é uma criação da comunidade, um multijogador online feito para uso em conjunto com o jogo Grand Theft Auto: San Andreas, permitindo que jogadores interajam com quase tudo o que o jogo base tem para oferecer. Existem versões para Windows, Linux e Android.
