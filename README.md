@@ -7,10 +7,10 @@ Fiz esta gamemode como uma prática de código, porém ao longo do tempo me apeg
 - Sistema de senha para nomes de contas;
 - Filterscripts (arquivos adicionais) para mais comandos e funções.
 
-# Como usar a minha gamemode no seu servidor
+## Como usar a minha gamemode no seu servidor
 - Baixe o código base e substitua tudo na pasta SAMP.
 
-## O que é SA-MP?
+# O que é SA-MP?
 - SA-MP é uma criação da comunidade, um multijogador online feito para uso em conjunto com o jogo Grand Theft Auto: San Andreas, permitindo que jogadores interajam com quase tudo o que o jogo base tem para oferecer. Existem versões para Windows, Linux e Android.
 
 ![samp](https://github.com/user-attachments/assets/7c3acdf6-903e-4ae6-9e4e-2f72dccf5589)
