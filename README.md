@@ -17,5 +17,5 @@ Fiz esta gamemode como uma prática de código, porém ao longo do tempo me apeg
 
 ## Como faço pra jogar?
 - Siga as instruções deste site, com o GTA:SA já instalado: https://www.sa-mp.mp/downloads/
-- Para android, busque na Play Store por "samp launcher" e baixe o que lhe agradar mais.
+- Para android, busque na Play Store por "samp launcher" e baixe algum de sua preferência.
 - Escolha um servidor na lista e jogue!
