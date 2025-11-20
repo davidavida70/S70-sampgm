@@ -534,7 +534,7 @@ public OnPlayerDeath(playerid, killerid, reason){
     if(killerid != INVALID_PLAYER_ID && jobId[killerid] == 3){
         SetPlayerInterior(playerid, 6);
         SetPlayerPos(playerid,263.4595, 76.8951, 1001.0391);
-        SetTimerEx("liberarPrisao", 665000, false, "i", playerid);
+        prisaotimer[playerid] = SetTimerEx("liberarPrisao", 665000, false, "i", playerid);
         SetPlayerWantedLevel(playerid, 0);
         ResetPlayerWeapons(playerid);
         SetPlayerScore(killerid, GetPlayerScore(killerid) + 1);
