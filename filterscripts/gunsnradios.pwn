@@ -7,58 +7,10 @@ public OnFilterScriptInit()
     print("=)");
     return 1;
 }
-
-CMD:tec(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 32, 800);
-    return 1;
-}
-
-CMD:m4(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 31, 400);
-    return 1;
-}
-
-CMD:sniper(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 34, 100);
-    return 1;
-}
-
-CMD:colete(playerid,params[])
-{
-    SetPlayerArmour(playerid, 100.0);
-    return 1;
-}
-
-CMD:007(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 23, 200);
-    return 1;
-}
-
-CMD:granada(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 16, 12);
-    return 1;
-}
-
-CMD:spas(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 27, 150);
-    return 1;
-}
     
 CMD:flores(playerid,params[])
 {
     GivePlayerWeapon(playerid, 14, 1);
-    return 1;
-}
-
-CMD:ak(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 30, 400);
     return 1;
 }
 
@@ -68,40 +20,10 @@ CMD:camera(playerid,params[])
     return 1;
 }
 
-CMD:jetpack(playerid,params[])
-{
-    SetPlayerSpecialAction(playerid,SPECIAL_ACTION_USEJETPACK);
-    return 1;
-}
-
 CMD:jpsp(playerid,params[])
 {
     PlayAudioStreamForPlayer(playerid, "https://player.xcast.com.br/proxy/10668");
     SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Jovem Pan FM SP 100.9");
-    return 1;
-}
-
-CMD:deagle(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 24, 200);
-    return 1;
-}
-
-CMD:satchelc(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 39, 5);
-    return 1;
-}
-
-CMD:lanchamas(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 37, 500);
-    return 1;
-}
-
-CMD:serraeletrica(playerid,params[])
-{
-    GivePlayerWeapon(playerid, 9, 1);
     return 1;
 }
 
@@ -115,14 +37,14 @@ CMD:mixfm(playerid,params[])
 CMD:transfmrio(playerid,params[])
 {
     PlayAudioStreamForPlayer(playerid, "https://playerservices.streamtheworld.com/api/livestream-redirect/RT_RJ.mp3");
-    SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Transamï¿½rica FM Rio 101.3");
+    SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Transamérica FM Rio 101.3");
     return 1;
 }
 
 CMD:stopr(playerid,params[])
 {
     StopAudioStreamForPlayer(playerid);
-    SendClientMessage(playerid, 0x4D00C1FF, "Rï¿½dio Desligada.");
+    SendClientMessage(playerid, 0x4D00C1FF, "Rádio Desligada.");
     return 1;
 }
 

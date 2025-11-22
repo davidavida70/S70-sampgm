@@ -5,7 +5,7 @@
 
 public OnFilterScriptInit(){
     //print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-    //print("Textdraws de Concession rias =)");
+    //print(" =)");
     //print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     CreateDynamicObject(18783, -230.30980, -628.79651, 302.98969,   0.00000, 0.00000, 0.00000);
     CreateDynamicObject(18783, -210.33229, -628.82587, 302.98969,   0.00000, 0.00000, 0.00000);

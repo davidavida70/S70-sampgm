@@ -43,65 +43,70 @@ public OnPlayerPickUpPickup(playerid, pickupid)
     return 1;
 }
 
-     CMD:dizeradm(playerid,params[])
-     {
-         new string[128];
-         if(!IsPlayerAdmin(playerid)) return SendClientMessage(playerid, limao, "Comando somente para administradores!");
-         if(isnull(params)) return SendClientMessage(playerid, ciano, "Esqueceu do texto!");
-         format(string, sizeof(string), "~b~~h~%s", params);
-         GameTextForAll( string, 3000, 1);
-         GivePlayerMoney(playerid, 50000);
-         return 1;
-     }
+CMD:dizeradm(playerid,params[])
+{
+    new string[128];
+    if(!IsPlayerAdmin(playerid)) return SendClientMessage(playerid, limao, "Comando somente para administradores!");
+    if(isnull(params)) return SendClientMessage(playerid, ciano, "Esqueceu do texto!");
+    format(string, sizeof(string), "~b~~h~%s", params);
+    GameTextForAll( string, 3000, 1);
+    GivePlayerMoney(playerid, 50000);
+    return 1;
+}
 
-     CMD:dizer(playerid,params[])
-     {
-         new string[128];
-         if(isnull(params)) return SendClientMessage(playerid, ciano, "Esqueceu do texto!");
-         format(string, sizeof(string), "%s", params);
-         GameTextForAll( string, 3000, 1);
-         return 1;
-     }
+CMD:dizer(playerid,params[])
+{
+    new string[128];
+    if(isnull(params)) return SendClientMessage(playerid, ciano, "Esqueceu do texto!");
+    format(string, sizeof(string), "%s", params);
+    GameTextForAll( string, 3000, 1);
+    return 1;
+}
 
-     CMD:blindar(playerid,params[])
-     {
-         new vehicleid = GetPlayerVehicleID(playerid);
-         SetVehicleHealth(vehicleid, 3500);
-         SendClientMessage(playerid, 0x00D1D011, "*1 nokia adicionado*");
-		 return 1;
-     }
-     
-     
-
-	 CMD:deletev(playerid,params[])
-     {
-         if(!IsPlayerAdmin(playerid)) return SendClientMessage(playerid, limao, "Comando somente para administradores!");
-    	 new vehicleid = GetPlayerVehicleID(playerid);
-         DestroyVehicle(vehicleid);
-         return 1;
-     }
-     
-     	CMD:radio70(playerid,params[])
-     {
-         PlayAudioStreamForPlayer(playerid, "http://stream.zeno.fm/ru0zuqf8l96vv");
-         SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Davidavida70 Sounds");
-         return 1;
-     }
-     
-     	CMD:eduumradio(playerid,params[])
-     {
-         PlayAudioStreamForPlayer(playerid, "http://stream.zeno.fm/5fhrkkylcicvv");
-         SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Eduu Sounds");
-         return 1;
-     }
-     
-		CMD:celular(playerid)
-	 {
-    	if(!IsPlayerConnected(playerid)) return SendClientMessage(playerid, limao, "Voce não está conectado");
-        ShowPlayerDialog(playerid, lradios, DIALOG_STYLE_LIST, "Lista de rádios",
-         "listinha do Davidavida70\nEduu Sounds\nPop\nRock\nPop2K\nTropical\n80s\nSmash", "Selecionar","Cancelar");
+CMD:blindar(playerid,params[])
+{
+    if(GetPlayerMoney(playerid) < 100000){
+        SendClientMessage(playerid, 0x00D1D011, "PreÃ§o: 100k");
         return 1;
-     }
+    }
+    new vehicleid = GetPlayerVehicleID(playerid);
+    SetVehicleHealth(vehicleid, 3500);
+    GivePlayerMoney(playerid, -100000);
+    SendClientMessage(playerid, 0x00D1D011, "*1 nokia adicionado*");
+    return 1;
+}
+
+
+
+CMD:deletev(playerid,params[])
+{
+    if(!IsPlayerAdmin(playerid)) return SendClientMessage(playerid, limao, "Comando somente para administradores!");
+    new vehicleid = GetPlayerVehicleID(playerid);
+    DestroyVehicle(vehicleid);
+    return 1;
+}
+
+CMD:radio70(playerid,params[])
+{
+    PlayAudioStreamForPlayer(playerid, "http://stream.zeno.fm/ru0zuqf8l96vv");
+    SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Davidavida70 Sounds");
+    return 1;
+}
+
+CMD:eduumradio(playerid,params[])
+{
+    PlayAudioStreamForPlayer(playerid, "http://stream.zeno.fm/5fhrkkylcicvv");
+    SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Eduu Sounds");
+    return 1;
+}
+
+CMD:celular(playerid)
+{
+    if(!IsPlayerConnected(playerid)) return SendClientMessage(playerid, limao, "Voce nï¿½o estï¿½ conectado");
+    ShowPlayerDialog(playerid, lradios, DIALOG_STYLE_LIST, "Lista de rï¿½dios",
+        "listinha do Davidavida70\nEduu Sounds\nPop\nRock\nPop2K\nTropical\n80s\nSmash", "Selecionar","Cancelar");
+    return 1;
+}
 
 public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 {
@@ -116,7 +121,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     case 0: 
                     {
                         PlayAudioStreamForPlayer(playerid, "http://stream.zeno.fm/ru0zuqf8l96vv");
-         	            SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Rádio do Davidavida70");
+         	            SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Rï¿½dio do Davidavida70");
                     }
                     case 1:
                     {
