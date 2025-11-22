@@ -66,7 +66,7 @@ CMD:dizer(playerid,params[])
 CMD:blindar(playerid,params[])
 {
     if(GetPlayerMoney(playerid) < 100000){
-        SendClientMessage(playerid, 0x00D1D011, "PreÃ§o: 100k");
+        SendClientMessage(playerid, 0x00D1D011, "Preço: 100k");
         return 1;
     }
     new vehicleid = GetPlayerVehicleID(playerid);
@@ -102,8 +102,8 @@ CMD:eduumradio(playerid,params[])
 
 CMD:celular(playerid)
 {
-    if(!IsPlayerConnected(playerid)) return SendClientMessage(playerid, limao, "Voce nï¿½o estï¿½ conectado");
-    ShowPlayerDialog(playerid, lradios, DIALOG_STYLE_LIST, "Lista de rï¿½dios",
+    if(!IsPlayerConnected(playerid)) return SendClientMessage(playerid, limao, "Voce não está conectado");
+    ShowPlayerDialog(playerid, lradios, DIALOG_STYLE_LIST, "Lista de rádios",
         "listinha do Davidavida70\nEduu Sounds\nPop\nRock\nPop2K\nTropical\n80s\nSmash", "Selecionar","Cancelar");
     return 1;
 }
@@ -121,7 +121,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                     case 0: 
                     {
                         PlayAudioStreamForPlayer(playerid, "http://stream.zeno.fm/ru0zuqf8l96vv");
-         	            SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Rï¿½dio do Davidavida70");
+         	            SendClientMessage(playerid, 0x4D00C1FF, "Tocando agora: Rádio do Davidavida70");
                     }
                     case 1:
                     {
