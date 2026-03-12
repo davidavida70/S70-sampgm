@@ -10,7 +10,7 @@ create table contas(
 );
 
 alter table contas add column senha varchar(125) default null after id;
-
+/* testes
 select * from contas;
 
 select senha from contas where senha = 'boa tarde' and nome = 'Davidavida70';
@@ -19,7 +19,7 @@ select nome, senha from contas where nome = 'Davidavida70';
 
 
 update contas set senha = 'davi70', skin = 61 where id = 1;
-
+*/
 alter table contas add column cargo varchar(70) default 'desempregado' after skin;
 alter table contas add column nivel int default 0 after nome;
 
@@ -36,7 +36,8 @@ create table veiculos(
     numPosse int not null,
     foreign key (pID) references contas (id)
 );
+/* testes
 select * from veiculos;
 select * from veiculos where pID = 1;
-
+*/
 alter table contas add column estrelas int not null default 0;
